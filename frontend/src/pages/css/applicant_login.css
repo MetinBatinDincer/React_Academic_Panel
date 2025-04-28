@@ -1,0 +1,94 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+  }
+  
+  .register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .register-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 400px;
+    text-align: center;
+  }
+  
+  .register-card h2 {
+    color: #007BDF;
+    margin-bottom: 20px;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .register-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cfd8dc;
+    background-color: #e3f2fd;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .register-form button {
+    background-color: #007BDF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .register-form button:hover {
+    background-color: #006ac8;
+  }
+  
+  .bottom-image {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .bottom-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  .form-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .form-title .line {
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+  }
+  
+  .form-title h2 {
+    color: #007BDF;
+    white-space: nowrap;
+  }
+  

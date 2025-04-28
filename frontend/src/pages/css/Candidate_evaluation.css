@@ -1,0 +1,724 @@
+* {
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.baslikortala {
+  height: 100px;
+  max-width: 100%;
+  /* maksimum genişlik */
+  width: 100%;
+  /* sayfa genişliği kadar olsun */
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  /* ✅ YATAY ORTALAMA */
+}
+
+.baslikortala1 {
+  margin-left: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 10px 0 0 50px;
+  /* 🔹 sadece üstten 10px boşluk bırak */
+
+}
+
+.aciklama-yazi {
+  margin: 0;
+  /* 🔸 gereksiz boşlukları kaldır */
+  padding: 0;
+  font-size: 25px;
+  font-weight: 450;
+  color: #111;
+  line-height: 1.5;
+  max-width: 1000px;
+}
+
+
+
+/* Başlık çizgisi yapısı korunarak */
+.Candidate_evaluation-title-line1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0;
+  /* 🔸 boşluk sıfırla */
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.Candidate_evaluation-title-line1 h5 {
+  color: #0072ce;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.Candidate_evaluation-title-line1 .line1 {
+  flex-grow: 1;
+  height: 1.6px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+}
+
+
+.Candidate_evaluation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* ⬅️ ortalama için önemli */
+  width: 100%;
+  min-height: 80vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+}
+
+.Candidate_evaluation-containersag {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+
+}
+
+
+.Candidate_evaluation-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Başlık çizgisi yapısı korunarak */
+.Candidate_evaluation-title-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 1400px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.Candidate_evaluation-title-line h5 {
+  color: #0072ce;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.Candidate_evaluation-title-line .line {
+  flex-grow: 1;
+  height: 1.6px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Duyuru kartı yapısı */
+.Candidate_evaluation-card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: transparent;
+  border: 1.6px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: none;
+  margin-bottom: 20px;
+  max-width: 1200px;
+  width: 1200px;
+  height: 75vh;
+  min-height: 280px;
+  margin: 0 auto;
+  /* ✅ Ortalamak için bunu ekle */
+}
+
+
+/* Görsel kutusu */
+.Candidate_evaluation-image-box {
+  width: 200px;
+  height: 290px;
+  background-color: #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  margin-right: 30px;
+  /* Görsel ile metin arasında boşluk */
+  transition: box-shadow 0.3s ease;
+}
+
+.Candidate_evaluation-image-box:hover {
+  box-shadow: 4px 4px 20px rgba(233, 107, 3, 0.523);
+
+}
+
+/* Metin kutusu */
+.Candidate_evaluation-text {
+  flex: 1;
+  color: #0072ce;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+}
+
+.Candidate_evaluation-text h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Buton grubu */
+.Candidate_evaluation-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  position: center;
+}
+
+.normal-button {
+  padding: 10px 20px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.primary-button {
+  padding: 10px 20px;
+  background-color: #0072ce;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Footer */
+.Candidate_evaluation-footer {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.footer-img {
+  width: 100%;
+  max-width: 1000px;
+}
+
+
+
+.Candidate_evaluation-contentsol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #222;
+}
+
+.kisiBilgileri {
+  max-width: 1000px;
+  width: 95%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 30px auto 0 auto;
+}
+
+
+.juriYorumu {
+  width: 700px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1.6px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.juriYorumu textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  outline: none;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.radio-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Segoe UI', sans-serif;
+  width: 700px;
+  margin-bottom: 20px;
+}
+
+.custom-radio {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  font-size: 16px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.custom-radio input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  background-color: white;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.custom-radio input:checked ~ .checkmark {
+  background-color: #007bff;
+}
+
+.kaydet-button-wrapper {
+  width: 700px;
+  text-align: right;
+}
+
+.kaydet-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.kaydet-button:hover {
+  background-color: #005bb5;
+}
+
+
+/* Kategori Başlığı */
+.puan-kategori {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.puan-kategori h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 4px;
+}
+
+/* Kriter Satırı */
+.puan-satiri {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0,0,0,0.03);
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  gap: 10px;
+}
+
+.puan-kriter {
+  flex: 2;
+  font-size: 16px;
+  color: #333;
+}
+
+.puan-sistem {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+  color: #0072ce;
+  text-align: center;
+}
+
+.puan-input {
+  flex: 1;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+}
+
+
+
+.juriYorumu textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Radyo butonlar (önceden tanımlandıysa yine buradan kullanılır) */
+.radio-checkbox-group {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.custom-radio {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #007bff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.custom-radio input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  background-color: white;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.custom-radio input:checked ~ .checkmark {
+  background-color: #007bff;
+}
+
+/* Kaydet Butonu */
+.kaydet-button-wrapper {
+  width: 100%;
+  max-width: 800px;
+  text-align: right;
+}
+
+.kaydet-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.kaydet-button:hover {
+  background-color: #005bb5;
+}
+.kisiBilgileri {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  border: 1.6px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 30px auto 0 auto;
+  max-width: 1000px;       /* ✅ Daha dar görünüm */
+  width: 95%;              /* ✅ Ekrana taşmasın */
+  box-sizing: border-box;  /* ✅ Padding taşma yapmasın */
+  overflow-x: hidden;
+}
+
+/* Puan kategorileri */
+.puan-kategori {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+}
+
+.puan-kategori h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 4px;
+}
+
+/* Kriter satırı */
+.puan-satiri {
+  display: flex;
+  flex-wrap: wrap; /* ✅ Taşarsa alta geçsin */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.03);
+  gap: 10px;
+}
+
+.puan-kriter {
+  flex: 2;
+  font-size: 16px;
+  color: #333;
+}
+
+.puan-sistem {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+  color: #0072ce;
+  text-align: center;
+}
+
+.puan-input {
+  flex: 1;
+  min-width: 100px;
+  max-width: 150px;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Mobil uyumlu tasarım */
+@media (max-width: 600px) {
+  .puan-satiri {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .puan-input,
+  .puan-sistem {
+    width: 100%;
+    text-align: left;
+  }
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.kategori-toplamlari {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.kategori-toplam {
+  font-size: 16px;
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+}
+
+.genel-toplam {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  font-weight: 600;
+}
+.alt-detaylar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px 0 15px 10px;
+  font-size: 14px;
+}
+
+.alt-detay-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.alt-detay-item label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.alt-detay-item input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+.alt-detay-item span.alt-detay-deger {
+  padding: 6px 10px;
+  background-color: #f3f3f3;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-top: 4px;
+  display: inline-block;
+  color: #333;
+}
+.puan-ust {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.faaliyet-grubu {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.faaliyet-grubu h4 {
+  color: #0072ce;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.faaliyet-item {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.faaliyet-item p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.faaliyet-item strong {
+  color: #0072ce;
+  margin-right: 8px;
+}
+
+.puanlar-ozeti {
+  background-color: #e9f2ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.puanlar-ozeti h4 {
+  color: #0072ce;
+  margin-bottom: 15px;
+}
+
+.puan-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #cce5ff;
+}
+
+.puan-item p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.puan-item strong {
+  color: #0072ce;
+  margin-right: 8px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+.error {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #dc3545;
+  background-color: #f8d7da;
+  border-radius: 8px;
+  margin: 20px;
+}

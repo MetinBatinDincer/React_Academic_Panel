@@ -1,0 +1,33 @@
+.container-home {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    padding: 1rem;
+    max-height: 160px;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  
+  .container-home:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.16);
+  }
+  
+  .container-home .date {
+    font-size: .875rem;
+    color: #666;
+    margin-bottom: .5rem;
+  }
+  
+  .container-home .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+  }
+  
+  .container-home .description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  

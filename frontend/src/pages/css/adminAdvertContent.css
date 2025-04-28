@@ -1,0 +1,421 @@
+/* Genel düzenlemeler */
+.mainDiv {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Üst Bölüm */
+.topDiv {
+  display: flex;
+}
+.topMain {
+  width: 100%;
+  min-height: 450px;
+  background-color: white;
+  padding: 10px;
+}
+.topMainIn {
+  width: 100%;
+  min-height: 450px;
+  background-color: white;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.topMainInRow1, 
+.topMainInRow2, 
+.topMainInRow3 {
+  margin: 20px;
+}
+.topMainInRow3 {
+  display: flex;
+  flex-direction: column;
+}
+.topMainInRow1 {
+  width: 20%;
+  min-height: 400px;
+  background-color: gainsboro;
+  border-radius: 13px;
+  border-bottom-left-radius: 0;
+  left: 25px;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.topMainInRow2 {
+  width: 60%;
+  min-height: 400px;
+  left: 25px;
+  padding: 5px;
+}
+.topMainInRow3 {
+  width: 10%;
+  min-height: 400px;
+}
+.kouName {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 32px;
+}
+.kouName::after {
+  content: "";
+  width: 25%;
+  margin-left: 10px;
+  height: 1px;
+  background-color: #000;
+}
+
+/* İlan içeriği ve gerekli belgeler */
+.required-docs {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.required-docs h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+.required-docs ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.required-docs li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 1rem;
+  color: #555;
+  border-bottom: 1px dashed #ddd;
+}
+.required-docs li:last-child {
+  border-bottom: none;
+}
+.required-docs .doc-icon {
+  margin-right: 10px;
+  font-size: 1.4rem;
+}
+
+/* İlan Silme Butonu */
+.delete-button {
+  background-color: red;
+  color: #fff;
+  border: 2px solid red;
+  cursor: pointer;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  padding: 8px 12px;
+}
+.delete-button:hover {
+  background-color: darkred;
+  color: #fff;
+}
+.delete-button:active {
+  transform: scale(0.98);
+}
+.deleteAdvertDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Alt Bölüm */
+.bottomDiv {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  padding: 10px;
+}
+.bottomDivLeft {
+  width: 50%;
+  min-height: 400px;
+  padding: 10px;
+}
+.bottomDivRight {
+  width: 50%;
+  min-height: 400px;
+  background-color: white;
+  padding: 20px;
+}
+.bottomDivLeft h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+.bottomDivLeft h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid gray;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+input[type="checkbox"]:checked {
+  background-color: aqua;
+  border-color: aqua;
+}
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.bottomDivRight h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+.bottomDivRight ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bottomDivRight li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+.bottomDivRight li:hover {
+  background-color: rgb(245,238,228);
+}
+.bottomDivRight li span {
+  font-size: 1rem;
+  color: #333;
+}
+.bottomDivRight li button {
+  padding: 6px 12px;
+  background-color: rgb(76,129,220);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.bottomDivRight li button:hover {
+  background-color: #1e08e7;
+}
+.bottomDivRight .pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.bottomDivRight .pagination button {
+  padding: 8px 16px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.bottomDivRight .pagination button:disabled {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+/* Edit Form */
+.edit-form input[type="text"],
+.edit-form textarea,
+.edit-form input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.edit-form label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.edit-form button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.edit-form button:hover {
+  background-color: #45a049;
+}
+
+
+.cancel-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #dc3545; /* Kırmızı ton */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-left: 10px; /* "Kaydet" butonundan ayrık durması için */
+}
+
+.cancel-button:hover {
+  background-color: #c82333; /* Hover efekti */
+}
+
+.required-docs {
+  margin-top: 20px;
+}
+
+.required-docs h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.required-docs ul {
+  list-style: none;
+  padding: 0;
+}
+
+.required-docs li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.doc-icon {
+  margin-right: 10px;
+}
+
+.doc-name {
+  font-size: 1rem;
+}
+
+
+/* Sol Container: Belgeler */
+.topMainInRow1 {
+  width: 25%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.doc-list {
+  list-style: none;
+  padding: 0;
+}
+
+.doc-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.doc-icon {
+  margin-right: 10px;
+}
+
+.doc-selection {
+  margin-top: 10px;
+}
+
+.doc-selection div {
+  margin-bottom: 5px;
+}
+
+/* Sağ Container: İlan Bilgileri */
+.topMainInRow2 {
+  width: 60%;
+  padding: 10px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: 80%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-form label {
+  margin-right: 10px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cancel-button {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #c82333;
+}
+
+/* Genel Düzen */
+.topMainIn {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+

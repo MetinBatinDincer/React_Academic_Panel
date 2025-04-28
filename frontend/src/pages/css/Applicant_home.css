@@ -1,0 +1,287 @@
+/* Genel Container Yapısı */
+.jury-container {
+    display: flex;
+    flex-wrap: nowrap; /* Elemanların aşağı kaymasını engeller */
+    flex-direction: row;
+    align-items: flex-start; /* Üstten hizalamayı sağlar */
+    position: relative; /* Sarı container için referans noktası */
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 400px; /* Yeterli yükseklik sağla */
+}
+
+.jury-container1 {
+    width: 50%;
+    min-height: 400px;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Sarı Container (Sağ Üste Sabitleme) */
+.jury-container2 {
+    width: 50%;
+    min-height: 400px;
+    background-color: yellow;
+    position: absolute; /* Sağ üste sabitle */
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.jury-container3 {
+    display: flex;
+    width: 100%;
+    min-height: 600px;
+    box-sizing: border-box;
+}
+
+/* Üst Sol Alan (jury-container1) */
+.jury-container1-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.jury-container-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.jury-container-content p {
+    font-size: 32px;
+    margin: 0;
+}
+
+.spanName p {
+    color: blue;
+}
+
+/* Üst Sağ Alan (jury-container2 içindeki duyuru kartı) */
+.announcement-card {
+    width: 70%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.announcement-image {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.announcement-image-left {
+    width: 50%;
+    height: 100%;
+    background-color: #ddd;
+    border-radius: 15px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.announcement-image-right {
+    width: 50%;
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 15px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 220px;
+    top: 0;
+    z-index: 2;
+}
+
+.date {
+    font-size: 14px;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.announcement-title {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Alt Sol Alan (jury-container3-left) */
+.jury-container3-left {
+    width: 50%;
+    min-height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.jury-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.jury-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    justify-content: space-between;
+    color: black;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+.jury-date {
+    color: #007bff;
+    font-size: 12px;
+}
+
+.jury-role {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* Alt Sağ Alan (jury-container3-right) */
+.jury-container3-right {
+    width: 50%;
+    min-height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.jury-container3-right-container-image {
+    width: 70%;
+    height: 300px;
+    background-color: beige;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Genel Buton Stilleri */
+button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 32px;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.evaluate-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.evaluate-button:hover {
+    background: #0056b3;
+}
+
+/* Başlık ve Çizgi Stilleri */
+.title-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.title-line h4 {
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: lightgray;
+}
+
+.jury-container3-left h2 {
+    font-size: 24px;
+    margin-top: 5px;
+    color: black;
+    width: 80%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+/* Sayfalama Stilleri */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.pagination button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.pagination button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.jury-container2 {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+}

@@ -1,0 +1,350 @@
+/* Ana konteyner */
+.candidate-application-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  
+  background-color: transparent;
+  border: 1.6px solid rgba(65, 65, 65, 0.1);
+  border-radius: 15px;
+  box-shadow: 2px 2px 15px rgba(61, 65, 68, 0.233);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Başlık */
+.candidate-application-container h2 {
+  color: #007bff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Şık listesi */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* Tek bir şık satırı */
+.option-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1.4;
+  user-select: none;
+}
+
+.option-item input[type="checkbox"] {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  accent-color: #007bff;
+}
+
+/* Devam Et butonu */
+.continue-button {
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.continue-button:hover {
+  background-color: #0056b3;
+}
+
+.option-item {
+  display: flex;
+  align-items: flex-start;
+  /* metni üstten hizala */
+  gap: 12px;
+  /* kutu ile metin arası boşluk */
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.option-item input[type="checkbox"] {
+  margin-top: 4px;
+  /* kutuyu biraz aşağı al */
+  width: 16px;
+  height: 16px;
+  accent-color: #007bff;
+  /* kutu rengi mavi */
+  cursor: pointer;
+}
+
+.subheading {
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #777777;
+
+}
+
+.option-item.no-checkbox {
+  display: block;
+  margin-left: 0;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.option-label {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.uniform-checkbox {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  margin: 0;
+  accent-color: #007bff;
+  /* modern tarayıcılarda mavi checkbox rengi */
+  cursor: pointer;
+}
+
+.option-header {
+  font-weight: 600;
+  font-size: 17px;
+  margin: 25px 0 10px;
+}
+
+.section-title {
+  cursor: pointer;
+  background-color: #ffffff;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.section-title:hover {
+  background-color: #e0e0e0;
+}
+
+.arrow {
+  font-size: 18px;
+  color: #007bff;
+
+}
+
+.options-list {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.uniform-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #007bff;
+}
+
+.option-label {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.option-header {
+  font-weight: bold;
+  font-size: 17px;
+  margin: 25px 0 10px;
+}
+
+.continue-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  
+}
+
+.continue-button:hover {
+  background-color: #0056b3;
+}
+
+.sub-section-title {
+  margin-left: 12px;
+  cursor: pointer;
+  color: #007bff;
+  background-color: #fafafa;
+  padding: 10px 14px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.toggle-button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.toggle-button {
+  padding: 6px 12px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  background-color: white;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-button.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+/* Başlıklar için */
+.candidate-application-container h2 {
+  font-weight: 600;
+  /* bold yerine semi-bold */
+  color: #333;
+}
+
+.section-title {
+  font-weight: 600;
+  /* bold yerine semi-bold */
+  color: #333;
+}
+
+.sub-section-title {
+  font-weight: 500;
+  /* 600 yerine medium */
+  color: #333;
+}
+
+/* Diğer metinler için */
+.option-label {
+  font-weight: 400;
+  /* normal font ağırlığı */
+  color: #333;
+}
+
+.option-header {
+  font-weight: 500;
+  /* bold yerine medium */
+  color: #333;
+}
+
+.application-period {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  border: 1.6px solid rgba(65, 65, 65, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 2px 2px 15px rgba(61, 65, 68, 0.233);
+  margin-bottom: 20px;
+  margin-top: 40px;
+  max-width: 800px;
+  width: 100%;
+  min-height: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.application-period h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.application-period label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.application-period input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.application-period input[type="radio"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.application-period input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
+.Anadiv {
+  position: relative;
+  
+  flex-direction: column;
+  margin-top: 40px;
+  align-items: flex-start;
+  background-color: transparent;
+  border: 1.6px solid rgba(65, 65, 65, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: none;
+  margin-bottom: 20px;
+  max-width: 1000px;
+  width: 100%;
+  height: auto; /* ✅ Buraya dikkat */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+

@@ -1,0 +1,48 @@
+.header {
+    width: 90%; /* genişliği biraz küçülterek card efekti oluşturur */
+    max-width: 1200px;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0px auto; /* ortalar ve üstten boşluk verir */
+    border-radius: 15px; /* yuvarlak köşeler */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* daha belirgin gölge */
+    position: relative; /* Diğer elementlerin üstünde gözükmesi için */
+    z-index: 10; /* diğer içeriklerin üstünde durur */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.university-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #00437a;
+}
+
+.header-right .login-btn {
+    padding: 8px 16px;
+    border: 1px solid white;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s ease;
+    font-size: 14px;
+}
+
+.header-right .login-btn:hover {
+    background-color: white;
+}

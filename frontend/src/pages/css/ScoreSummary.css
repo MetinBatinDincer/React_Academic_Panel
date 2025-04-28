@@ -1,0 +1,158 @@
+.score-summary-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .score-summary-container h2 {
+    color: #0072ce;
+  }
+  
+  .score-summary-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .score-summary-container li {
+    padding: 8px 0;
+    font-size: 16px;
+  }
+  
+  .go-back-button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #0072ce;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  /* Modal stilleri */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+  }
+
+  .modal-content.success h3 {
+    color: #2ecc71;
+  }
+
+  .modal-content.error h3 {
+    color: #e74c3c;
+  }
+  
+  .modal-content h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+  
+  .modal-content p {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    font-size: 1.1em;
+  }
+  
+  .modal-content button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+  }
+  
+  .modal-content button:hover {
+    background-color: #2980b9;
+  }
+
+  .modal-content.success button {
+    background-color: #2ecc71;
+  }
+
+  .modal-content.success button:hover {
+    background-color: #27ae60;
+  }
+
+  .modal-content.error button {
+    background-color: #e74c3c;
+  }
+
+  .modal-content.error button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Mevcut stiller */
+  .score-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .validation-errors {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
+    background-color: #fdf3f2;
+  }
+  
+  .error-item {
+    color: #e74c3c;
+    margin: 5px 0;
+  }
+  
+  .apply-button, .go-back-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .apply-button {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .apply-button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  .go-back-button {
+    background-color: #95a5a6;
+    color: white;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
+    background-color: #fdf3f2;
+  }
+  

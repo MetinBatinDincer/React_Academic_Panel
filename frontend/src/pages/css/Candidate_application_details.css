@@ -1,0 +1,301 @@
+.details-container {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .details-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    margin-top: 20px;
+    color: #0072ce;
+  }
+  
+  .details-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    margin-top: 20px;
+    color: #0072ce;
+    font-weight: 500; /* ← yazıyı inceltmek için */
+  }
+  
+  .details-title .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ddd;
+  }
+  .details-subtitle {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+  }
+  .entry-group {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f9f9;
+  }
+  
+  .entry-group h3 {
+    color: #0072ce;
+    margin-bottom: 15px;
+  }
+  
+  .entry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+  }
+  
+  .entry-form:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .entry-form input,
+  .entry-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .entry-form textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .add-button,
+  .delete-button,
+  .submit-button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .add-button {
+    background-color: #0072ce;
+    color: white;
+    border: none;
+    margin-top: 10px;
+  }
+  
+  .add-button:hover {
+    background-color: #005bb5;
+  }
+  
+  .delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    width: fit-content;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+  
+  .submit-button {
+    display: block;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    margin: 40px auto 0;
+    font-size: 16px;
+  }
+  
+  .submit-button:hover {
+    background-color: #218838;
+  }
+  .entry-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  
+  .foreign-toggle {
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 1px solid #0072ce;
+    border-radius: 5px;
+    color: #0072ce;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 40px; /* Sil butonuyla hizalı */
+    display: flex;
+    align-items: center;
+  }
+  
+  .foreign-toggle.active {
+    background-color: #0072ce;
+    color: white;
+  }
+  
+
+  .citation-note {
+    font-size: 12px;
+    font-style: italic;
+    color: #666;
+    margin: -5px 0 10px 5px;
+  }
+
+
+
+/* Doktora sonrası toggle  */
+.doctorate-toggle {
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 1px solid #0072ce;
+    border-radius: 5px;
+    color: #0072ce;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 40px; /* Sil butonuyla hizalı */
+    display: flex;
+    align-items: center;
+  }
+  
+  .doctorate-toggle.active {
+    background-color: #0072ce;
+    color: white;
+  }
+  .author-role-fields {
+    display: flex;
+    flex-direction: row; /* yan yana dizilim */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .author-role-fields label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 200px;
+  }
+  
+  .checkbox-bonus-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-width: 220px;
+    padding-top: 4px;
+  }
+  
+  .checkbox-bonus-group label {
+    display: flex;
+    align-items: center;
+    font-size: 14.5px;
+    gap: 10px;
+    color: #333;
+  }
+  
+  .checkbox-bonus-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #007bff;
+    cursor: pointer;
+  }
+  .author-role-fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .role-inputs {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+  
+  .role-inputs label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .checkbox-bonus-group-inline {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 240px;
+  }
+  
+  .checkbox-bonus-group-inline label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .checkbox-bonus-group-inline input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #007bff;
+  }
+  .role-inputs {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex: 1;
+    align-items: flex-start;
+  }
+  
+  .role-inputs label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .role-inputs select,
+  .role-inputs input[type="number"] {
+    margin-top: 6px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 220px;
+    box-sizing: border-box;
+  }
+  

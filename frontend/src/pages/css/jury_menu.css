@@ -1,0 +1,426 @@
+/* Genel Container Yapısı */
+.jury-container {
+    display: flex;
+}
+
+.jury-container1 {
+    width: 50%;
+    height: 400px;
+    background-color: white;
+    padding: 20px;
+}
+
+.jury-container2 {
+    width: 50%;
+    height: 400px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jury-container3 {
+    display: flex;
+    width: 100%;
+    height: 600px;
+}
+
+/* Üst Sol Alan (jury-container1) */
+.jury-container1-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.jury-container-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.jury-container-content p {
+    font-size: 32px;
+    margin: 0;
+}
+
+.spanName p {
+    color: blue;
+}
+
+/* Üst Sağ Alan (jury-container2) */
+.announcement-card {
+    width: 70%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.announcement-image {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.announcement-image-left {
+    width: 50%;
+    height: 100%;
+    background-color: #ddd;
+    border-radius: 15px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.announcement-image-right {
+    width: 50%;
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 15px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 220px;
+    top: 0;
+    z-index: 2;
+} 
+
+.date {
+    font-size: 14px;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.announcement-title {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Alt Sol Alan (jury-container3-left) */
+.jury-container3-left {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.jury-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin-left: 100px;
+}
+
+.jury-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    justify-content: space-between;
+    color: black;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease; /* Hover efekti için geçiş */
+}
+
+.jury-item:hover {
+    background-color: #e6f0ff; /* Hafif mavi arka plan */
+    transform: scale(1.02); /* Hafif büyüme */
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3); /* Daha belirgin mavi gölge */
+}
+
+.jury-date {
+    color: #007bff;
+    font-size: 12px;
+}
+
+.jury-role {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* Alt Sağ Alan (jury-container3-right) */
+.jury-container3-right {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jury-container3-right-container-image {
+    width: 70%;
+    height: 300px;
+    background-color: beige;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 10px; /* İç boşluk zaten inline style'da var, burada da tutarlılık için ekledim */
+}
+
+/* Genel Buton Stilleri */
+button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 32px;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.evaluate-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.evaluate-button:hover {
+    background: #0056b3;
+}
+
+/* Başlık ve Çizgi Stilleri */
+.title-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.title-line h4 {
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: lightgray;
+}
+
+.jury-container3-left h2 {
+    font-size: 24px;
+    margin-top: 5px;
+    color: black;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Sayfalama Stilleri */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.pagination button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.pagination button:hover {
+    background: #0056b3;
+}
+
+.pagination button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.jury-menu-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.jury-menu-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.jury-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #dc3545;
+}
+
+/* İlan Listesi Stilleri */
+.assigned-adverts {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.advert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.advert-item {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.advert-item:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+.advert-item.selected {
+  border-color: #007bff;
+  background-color: #f0f7ff;
+}
+
+.advert-item h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.advert-dates {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Başvuru Listesi Stilleri */
+.applications {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.application-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.application-item {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.application-item:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+.applicant-info h4 {
+  margin: 0 0 0.25rem 0;
+  color: #333;
+}
+
+.applicant-info p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.application-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.status-beklemede {
+  background-color: #ffd700;
+  color: #000;
+}
+
+.status-onaylandi {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.status-reddedildi {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .jury-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .jury-menu-container {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,64 @@
+.footer-container {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    
+  }
+  
+  .footer-image {
+    position: relative;
+    margin-bottom: 50px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .university-photo {
+    width: 100%;
+    height: 500px; /* Görsel yüksekliğini azaltmak için */
+    object-fit: cover;
+    opacity: 0.7;
+  }
+  
+  .logo-footer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: auto;
+    opacity: 0.95;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between; /* Yazıları yanlara daha iyi dağıtır */
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+  }
+  
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Yazıları sola hizalar */
+  }
+  
+  .footer-column h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .footer-column a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    margin: 4px 0;
+  }
+  
+  .footer-column a:hover {
+    color: #000;
+  }
+  

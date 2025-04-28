@@ -1,0 +1,208 @@
+.all {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.announcement-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.announcement-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Başlık çizgisi */
+.announcement-title-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.announcement-title-line h5 {
+  color: #0072ce;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.announcement-title-line .line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.Aradiv {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Jüri kartları */
+.jury-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 600px;
+  margin-right: 55px;
+}
+
+.jury-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  justify-content: space-between;
+  width: 500px;
+  max-width: 500px;
+  color: black;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.jury-date {
+  color: #007bff;
+  font-size: 12px;
+}
+
+.evaluate-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.evaluate-button:hover {
+  background: #0056b3;
+}
+
+.jury-role {
+  flex-grow: 1;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+/* Duyuru kartı */
+.announcement-card2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: transparent;
+  border: 1.6px solid rgba(255, 18, 18, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: none;
+  margin-bottom: 20px;
+  max-width: 600px;
+  width: 100%;
+  height: 75vh;
+  min-height: 280px;
+}
+
+/* Görsel kutusu */
+.announcement-image-box {
+  width: 200px;
+  padding: 20px;
+  height: 290px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  margin-right: 30px;
+}
+
+/* Metin kutusu */
+.announcement-text {
+  flex: 1;
+  color: #0072ce;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+}
+
+.announcement-text h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Buton grubu */
+.announcement-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-button {
+  padding: 10px 20px;
+  background-color: #0072ce; /* Mavi arka plan */
+  color: white; /* Beyaz yazı */
+  border: none; /* Kenarlık kaldırıldı */
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.prev-button:hover {
+  background-color: #0056b3; /* Hover'da koyu mavi */
+}
+
+.prev-button:disabled {
+  background-color: #b0c4de; /* Devre dışı durumda açık mavi/gri */
+  cursor: not-allowed;
+}
+
+.primary-button {
+  padding: 10px 20px;
+  background-color: #0072ce;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: #0056b3;
+}
+
+.primary-button:disabled {
+  background-color: #b0c4de;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.announcement-footer {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.footer-img {
+  width: 100%;
+  max-width: 1000px;
+}

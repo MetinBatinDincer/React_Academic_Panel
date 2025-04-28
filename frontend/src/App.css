@@ -1,0 +1,17 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+
+.link{
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  align-items: start;
+  margin: 10px;
+  color: black;
+}
+
+
