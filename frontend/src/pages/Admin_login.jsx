@@ -10,7 +10,7 @@ function AdminLogin() {
     sifre: ''
   });
   const [message, setMessage] = useState('');
-  const [authToken, setAuthToken] = useState(''); // Token'ı burada tutuyoruz.
+  const [authToken, setAuthToken] = useState('');
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -27,28 +27,36 @@ function AdminLogin() {
       const response = await axios.post('http://localhost:5000/api/auth/login', formData);
       const token = response.data.token;
       
-      // Token'ı hem localStorage'a hem de state'e kaydediyoruz.
-      localStorage.setItem('token', token);
-      setAuthToken(token);
-      
+      // Token'ı decode edip rol kontrolü yapıyoruz
       try {
         if (token) {
           const decoded = jwtDecode(token);
           const { id, tc, rol, iat, exp } = decoded;
           console.log("id:", id, "tc:", tc, "rol:", rol);
+          
+          // Sadece admin rolü olan kullanıcılar giriş yapabilir
+          if (rol !== 'admin') {
+            setMessage('Bu sayfa sadece admin kullanıcıları için erişilebilir.');
+            return;
+          }
+          
+          // Admin rolü doğrulandı, token'ı kaydediyoruz
+          localStorage.setItem('token', token);
+          setAuthToken(token);
+          
+          console.log("Token = ", token);
+          setMessage(response.data.message || 'Giriş başarılı');
+          // Admin ana sayfasına yönlendirme
+          navigate('/Admin_home');
         } else {
-          console.log("Token alınamadı.");
+          setMessage('Token alınamadı.');
         }
       } catch (err) {
         console.error("Token decode edilirken hata oluştu:", err);
+        setMessage('Kimlik doğrulama hatası');
       }
-      
-      console.log("Token = ", token);
-      setMessage(response.data.message);
-      // Örneğin profil sayfasına yönlendirme
-      navigate('/Admin_home');
     } catch (error) {
-      setMessage(error.response?.data?.error || 'Bir hata oluştu');
+      setMessage(error.response?.data?.error || 'Giriş başarısız. Lütfen bilgilerinizi kontrol edin.');
     }
   };
 
@@ -57,7 +65,7 @@ function AdminLogin() {
       <div className="register-card">
         <div className="form-title">
           <span className="line"></span>
-          <h2>Hoşgeldiniz</h2>
+          <h2>Admin Giriş</h2>
           <span className="line"></span>
         </div>
         <form className="register-form" onSubmit={handleSubmit}>
@@ -77,19 +85,9 @@ function AdminLogin() {
             required
             placeholder="Şifre"
           />
-          <Link to="/applicant_login" className="link-style">Kayıt Ol</Link>
-
-          <Link to="/Admin_home" className="link-style">Admin Home Geçici Link</Link>
-
-          <button type="submit">Giriş Yap</button>
-
-
-
-
-         
-         
+          <button type="submit">Admin Girişi</button>
         </form>
-        {message && <p>{message}</p>}
+        {message && <p className="message">{message}</p>}
       </div>
     </div>
   );

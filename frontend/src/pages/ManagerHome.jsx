@@ -44,6 +44,11 @@ function ManagerHome() {
     (currentPage - 1) * ilanPerPage,
     currentPage * ilanPerPage
   );
+  
+  // İlanları ikiye bölmek için
+  const halfwayIndex = Math.ceil(currentItems.length / 2);
+  const firstHalfItems = currentItems.slice(0, halfwayIndex);
+  const secondHalfItems = currentItems.slice(halfwayIndex);
 
   const nextPage = () => {
     if (currentPage < totalPages) {
@@ -61,8 +66,18 @@ function ManagerHome() {
     navigate(`/ManagerAdvertContent/${id}`);
   };
 
+  const formatDate = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString('tr-TR', options);
+  };
+
   if (loading) {
-    return <div className="mh-loading">Yükleniyor...</div>;
+    return (
+      <div className="mh-loading">
+        <div className="mh-loading-spinner"></div>
+        Yükleniyor...
+      </div>
+    );
   }
 
   return (
@@ -73,8 +88,6 @@ function ManagerHome() {
             <h4>Kocaeli Üniversitesi Bilgi Merkezi</h4>
             <span className="mh-line"></span>
           </div>
-          <br />
-          <br />
           <div className="mh-header-inner">
             <div className="mh-welcome">
               <span className="mh-user-name">
@@ -88,43 +101,88 @@ function ManagerHome() {
         </div>
       </div>
 
-      <div className="mh-main">
-        <div className="mh-ilanlar">
-          <div className="mh-title-line">
-            <h4>Kocaeli Üniversitesi</h4>
-            <span className="mh-line"></span>
-          </div>
-          <h2>İlanlar</h2>
-          <div className="mh-ilan-list">
-            {currentItems.map((ilan) => (
-              <div key={ilan.id} className="mh-ilan-item">
-                <p className="mh-ilan-date">
-                  {ilan.baslangic_tarihi} - {ilan.bitis_tarihi}
-                </p>
-                <p className="mh-ilan-title">{ilan.baslik}</p>
-                <button
-                  className="mh-detail-button"
-                  onClick={() => handleIlanClick(ilan.id)}
-                >
-                  İlan Detay
-                </button>
-              </div>
-            ))}
-          </div>
-          <div className="mh-pagination">
-            <button onClick={prevPage} disabled={currentPage === 1}>
-              Önceki
-            </button>
-            <span>
-              Sayfa {currentPage} / {totalPages}
-            </span>
-            <button onClick={nextPage} disabled={currentPage === totalPages}>
-              Sonraki
-            </button>
+      <div className="mh-main-container">
+        {/* Info card moved to the top */}
+        <div className="mh-info-card-container">
+          <div className="mh-info-card">
+            <h3>Yönetici Paneli</h3>
+            <p>Kocaeli Üniversitesi ilan sistemi yönetim paneline hoş geldiniz. Bu panel üzerinden ilanları yönetebilir ve başvuruları değerlendirebilirsiniz.</p>
           </div>
         </div>
-        <div className="mh-image-area">
-          <div className="mh-image-placeholder"></div>
+
+        <div className="mh-title-line mh-title-center">
+          <h4>Kocaeli Üniversitesi</h4>
+          <span className="mh-line"></span>
+        </div>
+        <h2 className="mh-main-title">İlanlar</h2>
+        
+        {ilanlar.length === 0 ? (
+          <div className="mh-no-ilan">
+            <p>Şu anda gösterilecek ilan bulunmamaktadır.</p>
+          </div>
+        ) : (
+          <>
+            <div className="mh-ilan-lists-container">
+              {/* First column of ilanlar */}
+              <div className="mh-ilan-list">
+                {firstHalfItems.map((ilan) => (
+                  <div key={ilan.id} className="mh-ilan-item">
+                    <p className="mh-ilan-date">
+                      {formatDate(ilan.baslangic_tarihi)} - {formatDate(ilan.bitis_tarihi)}
+                    </p>
+                    <p className="mh-ilan-title">{ilan.baslik}</p>
+                    <button
+                      className="mh-detail-button"
+                      onClick={() => handleIlanClick(ilan.id)}
+                    >
+                      İlan Detay
+                    </button>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Second column of ilanlar */}
+              <div className="mh-ilan-list">
+                {secondHalfItems.map((ilan) => (
+                  <div key={ilan.id} className="mh-ilan-item">
+                    <p className="mh-ilan-date">
+                      {formatDate(ilan.baslangic_tarihi)} - {formatDate(ilan.bitis_tarihi)}
+                    </p>
+                    <p className="mh-ilan-title">{ilan.baslik}</p>
+                    <button
+                      className="mh-detail-button"
+                      onClick={() => handleIlanClick(ilan.id)}
+                    >
+                      İlan Detay
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="mh-pagination">
+              <button onClick={prevPage} disabled={currentPage === 1}>
+                &laquo; Önceki
+              </button>
+              <span>
+                Sayfa {currentPage} / {totalPages || 1}
+              </span>
+              <button onClick={nextPage} disabled={currentPage === totalPages || totalPages === 0}>
+                Sonraki &raquo;
+              </button>
+            </div>
+          </>
+        )}
+        
+        <div className="mh-stats-summary">
+          <div className="mh-stat-item">
+            <div className="mh-stat-number">{ilanlar.length}</div>
+            <div className="mh-stat-label">Toplam İlan</div>
+          </div>
+          <div className="mh-stat-item">
+            <div className="mh-stat-number">{ilanlar.filter(ilan => new Date(ilan.bitis_tarihi) > new Date()).length}</div>
+            <div className="mh-stat-label">Aktif İlan</div>
+          </div>
         </div>
       </div>
 

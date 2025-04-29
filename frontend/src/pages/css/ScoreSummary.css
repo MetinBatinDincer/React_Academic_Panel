@@ -1,11 +1,19 @@
 .score-summary-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
   }
   
   .score-summary-container h2 {
     color: #0072ce;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #0072ce;
   }
   
   .score-summary-container ul {
@@ -14,18 +22,27 @@
   }
   
   .score-summary-container li {
-    padding: 8px 0;
+    padding: 10px 0;
     font-size: 16px;
+    border-bottom: 1px solid #f0f0f0;
   }
   
   .go-back-button {
     margin-top: 20px;
-    padding: 8px 16px;
+    padding: 10px 20px;
     background-color: #0072ce;
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .go-back-button:hover {
+    background-color: #005ca8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   /* Modal stilleri */
@@ -35,19 +52,20 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    backdrop-filter: blur(5px);
   }
   
   .modal-content {
     background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 550px;
     width: 90%;
     text-align: center;
   }
@@ -61,30 +79,33 @@
   }
   
   .modal-content h3 {
-    margin-bottom: 20px;
-    font-size: 1.5em;
+    margin-bottom: 25px;
+    font-size: 1.7em;
   }
   
   .modal-content p {
     color: #2c3e50;
-    margin-bottom: 25px;
-    line-height: 1.5;
-    font-size: 1.1em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-size: 1.2em;
   }
   
   .modal-content button {
     background-color: #3498db;
     color: white;
     border: none;
-    padding: 12px 30px;
-    border-radius: 5px;
+    padding: 14px 35px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: all 0.3s;
   }
   
   .modal-content button:hover {
     background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .modal-content.success button {
@@ -105,54 +126,184 @@
   
   /* Mevcut stiller */
   .score-section {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-left: 4px solid #0072ce;
+    border-radius: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .score-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .score-section h3 {
+    color: #0072ce;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 20px;
   }
   
   .validation-errors {
-    margin: 20px 0;
-    padding: 15px;
-    border: 1px solid #e74c3c;
-    border-radius: 5px;
-    background-color: #fdf3f2;
+    margin: 25px 0;
+    padding: 20px;
+    border-left: 4px solid #e74c3c;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   }
   
   .error-item {
     color: #e74c3c;
-    margin: 5px 0;
+    margin: 8px 0;
+    padding: 5px 0;
   }
   
-  .apply-button, .go-back-button {
-    margin: 10px;
-    padding: 10px 20px;
+  .buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .apply-button, .go-back-button, .export-pdf-button {
+    margin: 0;
+    padding: 12px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
   .apply-button {
-    background-color: #2ecc71;
+    background-color: #0072ce;
     color: white;
   }
   
-  .apply-button:disabled {
+  .apply-button:hover {
+    background-color: #005ca8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 114, 206, 0.2);
+  }
+  
+  .apply-button:disabled, .export-pdf-button:disabled {
     background-color: #95a5a6;
     cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
   }
   
   .go-back-button {
-    background-color: #95a5a6;
+    background-color: #616161;
     color: white;
+  }
+  
+  .go-back-button:hover {
+    background-color: #4a4a4a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(97, 97, 97, 0.2);
+  }
+  
+  .export-pdf-button {
+    background-color: #0072ce;
+    color: white;
+    border: 1px solid #0072ce;
+    background-color: transparent;
+    color: #0072ce;
+  }
+  
+  .export-pdf-button:hover {
+    background-color: #eaf2fa;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 114, 206, 0.15);
   }
   
   .error-message {
     color: #e74c3c;
+    margin: 15px 0;
+    padding: 15px;
+    border-left: 4px solid #e74c3c;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    font-weight: 500;
+  }
+  
+  .applicant-info {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-left: 4px solid #0072ce;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .applicant-info h3 {
+    color: #0072ce;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    font-size: 20px;
+  }
+  
+  .applicant-info p {
     margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #e74c3c;
-    border-radius: 5px;
-    background-color: #fdf3f2;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .criteria-section {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-left: 4px solid #0072ce;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .criteria-section h3 {
+    color: #0072ce;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    font-size: 20px;
+  }
+  
+  .score-details {
+    padding: 15px 0;
+    margin-top: 15px;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  .warning-list {
+    margin-top: 15px;
+    padding: 10px 0;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  .incomplete-item {
+    color: #f39c12;
+    padding: 5px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .score-summary-container {
+      padding: 20px;
+      margin: 0 10px;
+    }
+    
+    .buttons-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .apply-button, .go-back-button, .export-pdf-button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
   }
   
